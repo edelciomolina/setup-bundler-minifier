@@ -1,0 +1,9 @@
+name: 'Setup BundlerMinifierConsole.exe'
+description: 'Implements the "Bundler Minifier Console" compiled and embedded in this Action, sourced from https://github.com/madskristensen/BundlerMinifier'
+author: 'Edelcio Molina'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: 'terminal'
+  color: 'blue'

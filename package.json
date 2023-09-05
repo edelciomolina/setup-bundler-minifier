@@ -1,0 +1,44 @@
+{
+  "name": "setup-bundlerminifier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "This action sets up BundlerMinifierConsole.exe as a CLI tool for use in actions",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "package": "ncc build --source-map --license licenses.txt",
+    "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edelciomolina/setup-bundler-minifier.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "author": "Edelcio Molina",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^5.1.1",
+    "@actions/io": "^1.1.2",
+    "@actions/tool-cache": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@typescript-eslint/parser": "^3.10.1",
+    "@vercel/ncc": "^0.23.0",
+    "eslint": "^7.8.1",
+    "eslint-plugin-github": "^4.1.1",
+    "eslint-plugin-jest": "^23.20.0",
+    "js-yaml": "^3.14.0",
+    "prettier": "2.1.1",
+    "typescript": "^4.0.2"
+  }
+}
